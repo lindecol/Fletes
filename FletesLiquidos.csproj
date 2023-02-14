@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E72E4F4C-4835-4B02-824E-B80CBC43301C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FletesLiquidos</RootNamespace>
+    <AssemblyName>FletesLiquidos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\librerias\etlbprax\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\librerias\etlbprax\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\..\librerias\etlbprax\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.Common\12.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WinForms\12.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConceptoDao.cs" />
+    <Compile Include="FleteConfig.cs" />
+    <Compile Include="FleteDao.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbrirToken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbrirToken.Designer.cs">
+      <DependentUpon>FrmAbrirToken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdicionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdicionales.Designer.cs">
+      <DependentUpon>FrmAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarAdicional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarAdicional.Designer.cs">
+      <DependentUpon>FrmAgregarAdicional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCalcularFlete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalcularFlete.Designer.cs">
+      <DependentUpon>FrmCalcularFlete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConcepto.Designer.cs">
+      <DependentUpon>FrmConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConceptos.Designer.cs">
+      <DependentUpon>FrmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetalleHr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleHr.Designer.cs">
+      <DependentUpon>FrmDetalleHr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetalleXPlantaCargue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleXPlantaCargue.Designer.cs">
+      <DependentUpon>FrmDetalleXPlantaCargue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFletesParametrizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFletesParametrizados.Designer.cs">
+      <DependentUpon>FrmFletesParametrizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParametrizacionFletes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametrizacionFletes.Designer.cs">
+      <DependentUpon>FrmParametrizacionFletes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRutasPromedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRutasPromedio.Designer.cs">
+      <DependentUpon>FrmRutasPromedio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTokens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTokens.Designer.cs">
+      <DependentUpon>FrmTokens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros.cs" />
+    <Compile Include="PlantillTransporte.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoProducto.cs" />
+    <Compile Include="TokenDao.cs" />
+    <Compile Include="UcToken.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcToken.Designer.cs">
+      <DependentUpon>UcToken.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbrirToken.resx">
+      <DependentUpon>FrmAbrirToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdicionales.resx">
+      <DependentUpon>FrmAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarAdicional.resx">
+      <DependentUpon>FrmAgregarAdicional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalcularFlete.resx">
+      <DependentUpon>FrmCalcularFlete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConcepto.resx">
+      <DependentUpon>FrmConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConceptos.resx">
+      <DependentUpon>FrmConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleHr.resx">
+      <DependentUpon>FrmDetalleHr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleXPlantaCargue.resx">
+      <DependentUpon>FrmDetalleXPlantaCargue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFletesParametrizados.resx">
+      <DependentUpon>FrmFletesParametrizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametrizacionFletes.resx">
+      <DependentUpon>FrmParametrizacionFletes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRutasPromedio.resx">
+      <DependentUpon>FrmRutasPromedio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTokens.resx">
+      <DependentUpon>FrmTokens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaTransporte.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportePrueba.rdlc" />
+    <EmbeddedResource Include="UcToken.resx">
+      <DependentUpon>UcToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\LocalNacional.datasource" />
+    <None Include="Properties\DataSources\ReporteDetalleAdicionales.datasource" />
+    <None Include="Properties\DataSources\ReportePlantillTransporte.datasource" />
+    <None Include="Properties\DataSources\TipoProducto.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_11_Search_106236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Generate-tables_85519.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_order_2639879.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_1_1668045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Plus_206460.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_save_1608823.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_setting_1814117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_truck_1054949.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_524_truck_van__vehicle_education_4212890.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_check_alt_118699.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_vehicles-11_809733.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_199_CircledPlus_183316.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_write_126582.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_199_CircledPlus_1833161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_200_CircledMinus_183317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_vehicles-11_8097331.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_write_1265821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_200_CircledMinus_1833171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_11_Search_106236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_vehicles-11_8097332.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_location_115718.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
